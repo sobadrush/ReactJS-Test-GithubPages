@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import MyProgressBar from './my-components/MyProgressBar/MyProgressBar.js'
+import MyComponent from "./my-components/MyComponent/MyComponent.js";
+
 const myStyle = {color : 'orange', fontSize: '40px'}
 
 let doLogConsole1 = ( event ) => {
@@ -18,29 +21,41 @@ const myMultiButton = () => {
   let btnArr = [];
   for (let i = 0; i < 3; i++) {
     // btnArr.push(<button type="button" value={i} onClick={ doLogConsole1 }>我是第{i}個按鈕</button>);
-    btnArr.push(<button type="button" value={i} onClick={ (e) => { doLogConsole1(e); doLogConsole2(e); } }>我是第{i}個按鈕</button>);
+    btnArr.push(<button type="button" key={i} value={i} onClick={ (e) => { doLogConsole1(e); doLogConsole2(e); } }>我是第{i}個按鈕</button>);
   }
   return btnArr;
 }
 
-function App() {
+const printMessage = () => {
+  document.querySelector("#show-area").value="我被按到了！"
+}
+
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <h2 style={myStyle}>Hello World!</h2>
+
+        {/* 用{}包裹, 才會是int、boolean型態 */}
+        <MyProgressBar/>
+
+        <br/>
         { myMultiButton() }
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <MyComponent myName="父元件往子元件傳的值" myNumber={87} getData={true} handleClick={printMessage}/>
+
+        <p>Edit <code>src/App.js</code> and save to reload.</p>
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >Learn React</a>
+
+        <input type="text" id="show-area" style={{border: '5px solid orange', height: '1cm', margin: '1cm', width: '15cm'}} placeholder="測試綁定函式 - 子元件click後, 父元件異動"></input> 
+
+        <hr style={{height: '1px', borderTop:'2px solid red', width: '100%'}}/>
+
+        <MyComponent>
+          在「元件標籤」中設定的children文字
+        </MyComponent>
+
       </header>
     </div>
   );
