@@ -50,6 +50,7 @@ class MyComponentUseClass extends Component { // 繼承Component類別
     render() {
         return (
             <div style={{ border: '3px solid white', margin: '1cm' }}>
+                <h2>MyComponentUseClass</h2>
                 <h3>使用ES6 class建立的component</h3>
                 <button type="button" onClick={this.changeEmpName}>click ({this.empName})</button>
 

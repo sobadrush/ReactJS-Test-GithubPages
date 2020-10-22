@@ -11,6 +11,7 @@ function MyComponentWithUseState(props) {
 
   return (
     <div style={{ border: '3px solid white', margin: '1cm' }}>
+      <h2>MyComponentWithUseState</h2>
       <h3>使用function component 搭配 useState</h3>
       <button type="button" onClick={ () => { changeEmpName('Roger - Be Changed') } }>click ({empName})</button>
 
