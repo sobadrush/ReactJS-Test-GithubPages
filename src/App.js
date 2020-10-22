@@ -4,6 +4,7 @@ import './App.css';
 
 import MyProgressBar from './my-components/MyProgressBar/MyProgressBar.js'
 import MyComponent from "./my-components/MyComponent/MyComponent.js";
+import MyComponentUseClass from "./my-components/MyComponentUseClass/MyComponentUseClass.js";
 
 const myStyle = {color : 'orange', fontSize: '40px'}
 
@@ -55,6 +56,10 @@ function App(props) {
         <MyComponent>
           在「元件標籤」中設定的children文字
         </MyComponent>
+
+        <hr style={{height: '1px', borderTop:'2px solid red', width: '100%'}}/>
+
+        <MyComponentUseClass myName={'父元件往子元件傳的值'}/>
 
       </header>
     </div>
