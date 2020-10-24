@@ -47,27 +47,33 @@ class MyHttpApiComponent extends Component {
         return rows;
     }
 
+    clearTable = () => {
+        alert("========= clearTable =========");
+        this.setState({ bookList: undefined });
+    }
+
     render = () => {
         return (
             <div style={{ border: "3px solid white" }}>
                 <h2>MyHttpApiComponent</h2>
                 <button type="button" className="btn btn-danger my-margin" onClick={this.doFetchBookData}>點我查db.json的資料</button>
+                <button type="button" className="btn btn-outline-secondary" onClick={this.clearTable}>清空TABLE</button>
                 <table className="table table-hover" style={ {color: 'orange'} }>
                     <tbody>
                         {console.log("@@", this.state?.bookList)}
-                        {/* {   
+                        {   
                             // 可如此用map render (ref. https://stackoverflow.com/questions/25646502/how-can-i-render-repeating-react-elements)
-                            this.state?.bookList.map((perData, i) => 
+                            this.state?.bookList?.map((perData, i) => 
                                 <tr key={i}>
                                     <td>{perData.id}</td>
                                     <td>{perData.title}</td>
                                     <td>{perData.author}</td>
                                 </tr>
                             )
-                        } */}
+                        }
 
                         {/* 也可如此 */}
-                        { this.generateTableRow() }
+                        {/* { this.generateTableRow() } */}
                     </tbody>
                 </table>
 

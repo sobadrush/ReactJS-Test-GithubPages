@@ -1,3 +1,6 @@
+# 使用json測試
+json-server -p 3001 -w src/json-server-data/db.json
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
