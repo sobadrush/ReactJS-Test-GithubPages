@@ -7,6 +7,8 @@ import MyComponent from "./my-components/MyComponent/MyComponent.js";
 import MyComponentUseClass from "./my-components/MyComponentUseClass/MyComponentUseClass.js";
 import MyComponentWithUseState from "./my-components/MyComponentWithUseState/MyComponentWithUseState.js";
 import MyHttpApiComponent from "./my-components/MyHttpApiComponent/MyHttpApiComponent.js";
+import MyComponentLifecycle from "./my-components/MyComponentLifecycle/MyComponentLifecycle.js";
+import MyComponentLifecycle2 from "./my-components/MyComponentLifecycle/MyComponentLifecycle2.js";
 
 const myStyle = {color : 'orange', fontSize: '40px'}
 
@@ -67,6 +69,13 @@ function App(props) {
 
         <hr style={{height: '1px', borderTop:'2px solid red', width: '100%'}}/>
         <MyHttpApiComponent/>
+
+        <hr style={{height: '1px', borderTop:'2px solid red', width: '100%'}}/>
+        <MyComponentLifecycle myName="大雄"/>
+        <MyComponentLifecycle myName="靜香"/>
+
+        <hr style={{height: '1px', borderTop:'2px solid red', width: '100%'}}/>
+        <MyComponentLifecycle2 myName="靜香"/>
 
       </header>
     </div>

@@ -1,6 +1,9 @@
 # 使用json測試
 json-server -p 3001 -w src/json-server-data/db.json
 
+# JS export 
+https://wcc723.github.io/development/2020/03/25/import-export/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
