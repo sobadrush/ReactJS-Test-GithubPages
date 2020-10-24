@@ -1,4 +1,3 @@
-import { logRoles } from '@testing-library/react';
 import React from 'react';
 import { Component } from 'react';
 
@@ -27,7 +26,7 @@ export default class MyComponentLifecycle2 extends Component {
      * 假使一定要用jQuery操作DOM，大部份的人也是建議在componentDidMount中使用比較好，其中之一的原因也是因為這點
      */
     componentDidMount() {
-        console.log(" >>> componentDidMount <<< ")
+        console.log(" >>> MyComponentLifecycle2 componentDidMount <<< ")
 
         setTimeout(() => {
             document.querySelector("#msg").style.color = "LightCoral";
