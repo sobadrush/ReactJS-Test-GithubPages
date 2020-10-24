@@ -5,7 +5,8 @@ class MyHttpApiComponent extends Component {
         super(props);
         console.log("MyHttpApiComponent props >>> ", props);
         // ------------------------------------------------------
-        this.bookList = [];
+        // this.bookList = []; // init, 也可以
+        this.setState({ bookList: [] }); // init, 也可以
         // ------------------------------------------------------
         this.doFetchBookData = this.doFetchBookData.bind(this); // 自訂function綁定至自己
         this.generateTableRow = this.generateTableRow.bind(this); // 自訂function綁定至自己
