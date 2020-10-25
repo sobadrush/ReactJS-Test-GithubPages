@@ -11,6 +11,7 @@ import MyComponentLifecycle from "./my-components/MyComponentLifecycle/MyCompone
 import MyComponentLifecycle2 from "./my-components/MyComponentLifecycle/MyComponentLifecycle2.js";
 import MyComponentLifecycle3 from "./my-components/MyComponentLifecycle/MyComponentLifecycle3.js";
 import MyComponentLifecycle4 from "./my-components/MyComponentLifecycle/MyComponentLifecycle4.js";
+import MyComponentLifecycle5 from "./my-components/MyComponentLifecycle/MyComponentLifecycle5.js";
 
 const myStyle = { color: 'orange', fontSize: '40px' }
 
@@ -40,6 +41,7 @@ const printMessage = () => {
 function App(props) {
 
   const [isEnter, setIsEnter] = useState(true);
+  const [isShowComponent5, setIsShowComponent5] = useState(true);
 
   return (
     <div className="App">
@@ -85,7 +87,7 @@ function App(props) {
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
 
         <div style={{ margin: '2cm' }}>
-          <button onClick={(e) => { setIsEnter(!isEnter) }}>
+          <button type="button" onClick={(e) => { setIsEnter(!isEnter) }}>
             {(isEnter === true) ? "我又進來啦(MyComponentLifecycle3)" : "我又出去啦(MyComponentLifecycle3)"}
           </button>
           {isEnter === true ? <MyComponentLifecycle3 /> : null}
@@ -93,6 +95,15 @@ function App(props) {
 
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
         <MyComponentLifecycle4/>
+
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+
+        <button type="button" className="btn btn-outline-info my-margin" 
+          onClick={(e) => { setIsShowComponent5(!isShowComponent5) }}>
+            顯示Component5
+        </button>
+        { isShowComponent5 == true ? <MyComponentLifecycle5/> : '' }
+        
 
       </header>
     </div>
