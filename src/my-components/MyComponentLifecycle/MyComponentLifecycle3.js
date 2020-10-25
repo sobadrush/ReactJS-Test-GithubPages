@@ -57,15 +57,21 @@ export default class MyComponentLifecycle3 extends Component {
     }
 
     doShrinkage(){
-        this.setState({
-            nowDateTime: this.state.nowDateTime,
-            scalePercent: this.state.scalePercent / 1.3
+        this.setState((state, props) => {
+            // console.log("state >>> " , state);
+            // console.log("props >>> " , props);
+            return {
+                nowDateTime: state.nowDateTime,
+                scalePercent: state.scalePercent / 1.3
+            }
         });
     }
 
     render() {
         return (
             <div>
+                <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/"># ReactJS 元件生命週期圖(各版本)</a>
+                <br/>
                 <img src={lifecycleImg} alt="lifecycleImg.png" width={this.state.scalePercent + '%'} 
                     onMouseEnter={this.doEnlarge} onMouseLeave={this.doShrinkage}></img>
                 <h1>我是MyComponentLifecycle3</h1>
