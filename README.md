@@ -6,6 +6,12 @@ https://wcc723.github.io/development/2020/03/25/import-export/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# ReactJS 元件生命週期圖(各版本)
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+# IT幫幫忙
+https://ithelp.ithome.com.tw/articles/10222857
+
 ## Available Scripts
 
 In the project directory, you can run:
