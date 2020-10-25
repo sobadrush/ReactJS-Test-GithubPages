@@ -11,7 +11,7 @@ export default class MyComponentLifecycle2 extends Component {
         super(props);
         this.state = {
             isServerResponsed: false, // 初始值 - Server尚未回應
-            bookList : undefined
+            bookList: undefined
         }
 
         // 綁定自訂function
@@ -39,7 +39,7 @@ export default class MyComponentLifecycle2 extends Component {
     }
 
     // 自訂函式
-    doDelay(func, secs){
+    doDelay(func, secs) {
         setTimeout(func, secs);
     }
 
@@ -51,9 +51,9 @@ export default class MyComponentLifecycle2 extends Component {
             .then(res => res.json())
             .then(cbData => {
                 console.log("MyComponentLifecycle2 cbData >>>", cbData);
-                this.setState({ 
+                this.setState({
                     isServerResponsed: true,
-                    bookList: cbData 
+                    bookList: cbData
                 });
             })
             .catch(e => {
@@ -67,34 +67,34 @@ export default class MyComponentLifecycle2 extends Component {
         return (
             <div>
                 <h1>我是MyComponentLifecycle2</h1>
-                <img src={myTitle}></img>
+                <img src={myTitle} alt="componentDidMount.png"></img>
                 <br /><br />
-                <img src={myDetail001}></img>
+                <img src={myDetail001} alt="componentDidMount001.png"></img>
                 <br /><br />
-                <img src={myDetail002}></img>
+                <img src={myDetail002} alt="componentDidMount002.png"></img>
                 <h5 id="msg" style={{ color: "lightgreen", margin: "2cm" }}>我是初始MAG</h5>
 
                 {/* ------------------------------------ */}
 
-                <table className="table table-hover table-striped" style={{marginBottom: '2cm'}}>
+                <table className="table table-hover table-striped" style={{ marginBottom: '2cm' }}>
                     <thead>
-                        <tr style={{backgroundColor: 'lightblue'}}>
+                        <tr style={{ backgroundColor: 'lightblue' }}>
                             <th>id</th>
                             <th>title</th>
                             <th>author</th>
                         </tr>
                     </thead>
-                    <tbody style={{backgroundColor: 'lightgray'}}>
+                    <tbody style={{ backgroundColor: 'lightgray' }}>
                         {/* Inline If 與 && 邏輯運算子 */}
                         {/* ref. https://zh-hant.reactjs.org/docs/conditional-rendering.html */}
 
                         {
-                            this.state.isServerResponsed == false && 
+                            this.state.isServerResponsed === false &&
                             <tr><td colSpan="3">...Data is Loading...</td></tr>
                         }
 
                         {
-                            this.state.isServerResponsed == true && 
+                            this.state.isServerResponsed === true &&
                             // 可如此用map render (ref. https://stackoverflow.com/questions/25646502/how-can-i-render-repeating-react-elements)
                             this.state.bookList?.map((item, index) => {
                                 return (
@@ -102,7 +102,7 @@ export default class MyComponentLifecycle2 extends Component {
                                         <td>{item.id}</td>
                                         <td>{item.title}</td>
                                         <td>{item.author}</td>
-                                    </tr> 
+                                    </tr>
                                 )
                             })
 

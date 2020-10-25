@@ -87,7 +87,7 @@ function App(props) {
           <button onClick={(e) => { setIsEnter(!isEnter) }}>
             {(isEnter === true) ? "我又進來啦(MyComponentLifecycle3)" : "我又出去啦(MyComponentLifecycle3)"}
           </button>
-          {isEnter == true ? <MyComponentLifecycle3 /> : null}
+          {isEnter === true ? <MyComponentLifecycle3 /> : null}
         </div>
 
       </header>

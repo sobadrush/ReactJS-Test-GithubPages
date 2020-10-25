@@ -1,22 +1,22 @@
 import React from 'react';
-import { Component }  from 'react';
+import { Component } from 'react';
 
 export default class MyComponentLifecycle extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            isMale : true,
+            isMale: true,
             isShowPic: false
         }
     }
 
-    static getDerivedStateFromProps(props, state){
+    static getDerivedStateFromProps(props, state) {
         console.log("getDerivedStateFromProps.props >>>", props);
         console.log("getDerivedStateFromProps.state >>>", state);
-        if(props.myName == "靜香"){
+        if (props.myName === "靜香") {
             return { isMale: false, isShowPic: false };
-        } else{
+        } else {
             return { isMale: true, isShowPic: true };
         }
     }
@@ -24,10 +24,10 @@ export default class MyComponentLifecycle extends Component {
     render() {
 
         let result = null;
-        if(this.state.isMale == true){
-            result = <h3 style={{color: "red"}}>{this.props.myName} is : 男生</h3>;
-        } else{
-            result = <h3 style={{color: "orange"}}>{this.props.myName} is : 女生</h3>;
+        if (this.state.isMale === true) {
+            result = <h3 style={{ color: "red" }}>{this.props.myName} is : 男生</h3>;
+        } else {
+            result = <h3 style={{ color: "orange" }}>{this.props.myName} is : 女生</h3>;
         }
 
         let isShowPic = this.state.isShowPic;
@@ -36,10 +36,10 @@ export default class MyComponentLifecycle extends Component {
             <div style={{ border: '3px solid white' }}>
                 <h1>我是MyComponentLifecycle</h1>
 
-                <img src={ isShowPic == true ? require('../../assets/img/getDerivedStateFromProps.png') : ''}></img>
+                <img src={isShowPic === true ? require('../../assets/img/getDerivedStateFromProps.png') : ''} alt="getDerivedStateFromProps.png"></img>
 
                 {/* {console.log(123)} */}
-                { result }
+                { result}
 
             </div>
         )
