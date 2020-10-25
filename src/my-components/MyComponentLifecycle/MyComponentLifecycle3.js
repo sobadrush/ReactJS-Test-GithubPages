@@ -1,6 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 
+import lifecycleImg from '../../assets/img/ReactJS-生命週期2.png';
+
 export default class MyComponentLifecycle3 extends Component {
 
     constructor(props) {
@@ -9,9 +11,12 @@ export default class MyComponentLifecycle3 extends Component {
         this.timer1 = null;
         // ---------------------------------------------------
         this.getNowDateTime = this.getNowDateTime.bind(this);
+        this.doEnlarge = this.doEnlarge.bind(this);
+        this.doShrinkage = this.doShrinkage.bind(this);
         // ---------------------------------------------------
         this.state = {
-            nowDateTime: undefined
+            nowDateTime: undefined,
+            scalePercent: 60
         }
     }
 
@@ -40,15 +45,32 @@ export default class MyComponentLifecycle3 extends Component {
             let today = new Date();
             let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
             let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            this.setState( { nowDateTime: date + ' ' + time } );
+            this.setState({ nowDateTime: date + ' ' + time });
         }, 1000);
+    }
+
+    doEnlarge() {
+        this.setState({
+            nowDateTime: this.state.nowDateTime,
+            scalePercent: this.state.scalePercent * 1.3
+        });
+    }
+
+    doShrinkage(){
+        this.setState({
+            nowDateTime: this.state.nowDateTime,
+            scalePercent: this.state.scalePercent / 1.3
+        });
     }
 
     render() {
         return (
             <div>
+                <img src={lifecycleImg} alt="lifecycleImg.png" width={this.state.scalePercent + '%'} 
+                    onMouseEnter={this.doEnlarge} onMouseLeave={this.doShrinkage}></img>
                 <h1>我是MyComponentLifecycle3</h1>
-                <h2>{ this.state.nowDateTime }</h2>
+                <p>componentWillUnmount - 最常被用來移除 componentDidMount 中「只想要隨著元件新增的一切東西」</p>
+                <h2>{this.state.nowDateTime}</h2>
             </div>
         )
     }
