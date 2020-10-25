@@ -10,6 +10,7 @@ import MyHttpApiComponent from "./my-components/MyHttpApiComponent/MyHttpApiComp
 import MyComponentLifecycle from "./my-components/MyComponentLifecycle/MyComponentLifecycle.js";
 import MyComponentLifecycle2 from "./my-components/MyComponentLifecycle/MyComponentLifecycle2.js";
 import MyComponentLifecycle3 from "./my-components/MyComponentLifecycle/MyComponentLifecycle3.js";
+import MyComponentLifecycle4 from "./my-components/MyComponentLifecycle/MyComponentLifecycle4.js";
 
 const myStyle = { color: 'orange', fontSize: '40px' }
 
@@ -89,6 +90,9 @@ function App(props) {
           </button>
           {isEnter === true ? <MyComponentLifecycle3 /> : null}
         </div>
+
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+        <MyComponentLifecycle4/>
 
       </header>
     </div>

@@ -1,0 +1,12 @@
+.rotate {
+    background-color: transparent;
+    outline: 2px dashed;
+    /* transform: rotate(45deg); */
+    transform: rotate(var(--deg));
+}
+
+.shortInput {
+    width: 15%;
+    margin: 5px;
+    text-align: center;
+}
