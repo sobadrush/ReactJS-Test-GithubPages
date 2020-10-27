@@ -13,6 +13,8 @@ import MyComponentLifecycle3 from "./my-components/MyComponentLifecycle/MyCompon
 import MyComponentLifecycle4 from "./my-components/MyComponentLifecycle/MyComponentLifecycle4.js";
 import MyComponentLifecycle5 from "./my-components/MyComponentLifecycle/MyComponentLifecycle5.js";
 
+import Board from "./my-components/MyComponentOOXX/Board.js";
+
 const myStyle = { color: 'orange', fontSize: '40px' }
 
 let doLogConsole1 = (event) => {
@@ -104,6 +106,9 @@ function App(props) {
         </button>
         { isShowComponent5 == true ? <MyComponentLifecycle5/> : '' }
         
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+        <Board/>
+
 
       </header>
     </div>

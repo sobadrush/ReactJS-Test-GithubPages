@@ -16,6 +16,9 @@ https://ithelp.ithome.com.tw/articles/10193227
 # React：Failed prop type: You provided a `value` prop to a form field without an `onChange` handler. T
 https://blog.csdn.net/qq_40555976/article/details/105714145
 
+# 元件間傳值
+https://medium.com/@chachameow/reactjs%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-component%E9%96%93%E5%82%B3%E5%80%BC-53fbd469132e
+
 ## Available Scripts
 
 In the project directory, you can run:
