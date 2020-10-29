@@ -13,6 +13,8 @@ import MyComponentLifecycle3 from "./my-components/MyComponentLifecycle/MyCompon
 import MyComponentLifecycle4 from "./my-components/MyComponentLifecycle/MyComponentLifecycle4.js";
 import MyComponentLifecycle5 from "./my-components/MyComponentLifecycle/MyComponentLifecycle5.js";
 
+import Parent from './my-components/ComponentCommunicate/Parent.js'
+
 import Board from "./my-components/MyComponentOOXX/Board.js";
 
 const myStyle = { color: 'orange', fontSize: '40px' }
@@ -109,6 +111,8 @@ function App(props) {
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
         <Board/>
 
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+        <Parent></Parent>
 
       </header>
     </div>
