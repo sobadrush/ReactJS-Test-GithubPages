@@ -17,6 +17,8 @@ import Parent from './my-components/ComponentCommunicate/Parent.js'
 
 import Board from "./my-components/MyComponentOOXX/Board.js";
 
+import ProgressDIY from "./my-components/ComponentProgressDIY/ProgressDIY.js"
+
 const myStyle = { color: 'orange', fontSize: '40px' }
 
 let doLogConsole1 = (event) => {
@@ -112,7 +114,10 @@ function App(props) {
         <Board/>
 
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
-        <Parent></Parent>
+        <Parent/>
+
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+        <ProgressDIY/>
 
       </header>
     </div>
