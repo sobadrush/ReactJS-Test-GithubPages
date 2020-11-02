@@ -1,17 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
+import emitter from '../../utils/events';
 
-export default class Child extends React.Component {
+export default class ChildA extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            "isShowPic" : !props.empData.isShowPic
+            "isShowPic" : !props.empData.isShowPic,
+            "msgObjFromChildB": undefined
         }
     }
 
-    componentDidMount(){
-        
+    componentDidMount() {
+        // 元件裝載完成以後宣告一個自定義事件
+        this.eventEmitter = emitter.addListener('changeMessageFromChildB', (messageObj) => {
+            alert(messageObj.message);
+            console.log("ChildA收到的 messageObj is:", messageObj);
+
+            this.setState({
+                "isShowPic" : this.state.isShowPic,
+                "msgObjFromChildB": messageObj
+            });
+
+        });
     }
+
+    componentWillUnmount() {
+        emitter.removeListener(this.eventEmitter);
+    }
+
 
     handlerEmitToParent = (e) => {
         // emitToParent : 父元件 透過 props 往 子元件 binding的函式
@@ -28,8 +45,8 @@ export default class Child extends React.Component {
 
     render(){
         return (
-            <div className={ 'my-margin' }>
-                <h1>我是Child</h1>
+            <div className={ 'my-margin' } style={ { border: "3px solid pink" } }>
+                <h1>我是ChildA</h1>
                 <table className="table table-striped table-hover" border="3">
                     <tbody>
                         <tr className="table-primary">
@@ -42,6 +59,12 @@ export default class Child extends React.Component {
                                 <button type="button" onClick={ this.handlerEmitToParent }>向Parent傳資料</button>
                             </td>
                         </tr>                        
+                        <tr className="table-info">
+                            <td>ChildB 向 ChildA傳遞資料(使用 EventEmitter)</td>
+                            <td>
+                                { JSON.stringify(this.state.msgObjFromChildB) }
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

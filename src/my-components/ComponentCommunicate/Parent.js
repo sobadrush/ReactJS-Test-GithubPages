@@ -1,5 +1,6 @@
 import React from 'react';
-import Child from './Child';
+import ChildA from './ChildA';
+import ChildB from './ChildB';
 
 import lianyu from "../../assets/img/煉獄大哥.png";
 
@@ -28,13 +29,14 @@ export default class Parent extends React.Component {
 
     render() {
         return (
-            <div className={'my-margin'}>
+            <div className={'my-margin'} style={ { border: "3px solid yellow" } }>
                 <h1>我是Parent</h1>
 
                 { this.state.isShowPic == true ? <img src={lianyu} alt="煉獄大哥.png" style={{ width: "5cm" }} /> : "" }
                 
 
-                <Child empData={ this.state } emitToParent={ this.handleChildEmitData } />
+                <ChildA empData={ this.state } emitToParent={ this.handleChildEmitData } />
+                <ChildB/>
 
             </div>
         );
