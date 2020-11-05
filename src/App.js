@@ -19,6 +19,8 @@ import Board from "./my-components/MyComponentOOXX/Board.js";
 
 import ProgressDIY from "./my-components/ComponentProgressDIY/ProgressDIY.js"
 
+import MyProductList from "./my-components/ProductListComponent/MyProductList"
+
 const myStyle = { color: 'orange', fontSize: '40px' }
 
 let doLogConsole1 = (event) => {
@@ -118,6 +120,9 @@ function App(props) {
 
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
         <ProgressDIY/>
+
+        <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
+        <MyProductList/>
 
       </header>
     </div>
