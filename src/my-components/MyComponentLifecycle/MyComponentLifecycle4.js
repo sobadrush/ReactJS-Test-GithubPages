@@ -79,7 +79,7 @@ export default class MyComponentLifecycle4 extends Component {
 
     inputChangedHandler(e){
 
-        if(e.target.value == ''){
+        if(e.target.value === ''){
             e.target.value = 0;
         }
 

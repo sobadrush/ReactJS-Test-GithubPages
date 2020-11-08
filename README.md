@@ -20,6 +20,12 @@ https://blog.csdn.net/qq_40555976/article/details/105714145
 # 元件間傳值
 https://medium.com/@chachameow/reactjs%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-component%E9%96%93%E5%82%B3%E5%80%BC-53fbd469132e
 
+# ReactJS 路由
+https://ithelp.ithome.com.tw/articles/10188245
+
+# react router v.s react router dom (當我們安裝完react-router-dom，react-router就同時被包在裡面了。我們不需要再執行npm i react-router)
+https://ithelp.ithome.com.tw/articles/10226056
+
 ## Available Scripts
 
 In the project directory, you can run:
