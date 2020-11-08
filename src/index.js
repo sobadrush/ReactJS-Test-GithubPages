@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route } from 'react-router-dom'
 
-import About from './my-components/MyRouterTestComponent/About'
-import UserInfo from './my-components/MyRouterTestComponent/UserInfo'
 
+/**
+ * 原本長這樣
+ */
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App/>
@@ -16,13 +17,14 @@ import UserInfo from './my-components/MyRouterTestComponent/UserInfo'
 //   document.getElementById('root')
 // );
 
+/**
+ * 因為RouterView中使用 withRouter 時，報錯 You should not use <Route> or withRouter() outside a <Router>
+ * ref. https://blog.csdn.net/Jane_96/article/details/84754823?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+ */
 ReactDOM.render(
   (
     <HashRouter>
       <Route path="/" component={App}></Route>
-      <Route path="/about" component={About} />
-      <Route path="/userInfo" component={UserInfo} />
-      {/* <Route path="userInfo/:userId" component={UserInfo}/> */}
     </HashRouter>
   ),
   document.getElementById('root')

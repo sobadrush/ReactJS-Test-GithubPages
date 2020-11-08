@@ -23,6 +23,8 @@ import MyProductList from "./my-components/ProductListComponent/MyProductList"
 
 import { Link } from "react-router-dom";
 
+import RouterView from "./my-components/MyRouterTestComponent/RouterView"
+
 const myStyle = { color: 'orange', fontSize: '40px' }
 
 let doLogConsole1 = (event) => {
@@ -127,11 +129,7 @@ function App(props) {
         <MyProductList/>
 
         <hr style={{ height: '1px', borderTop: '2px solid red', width: '100%' }} />
-        <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/userInfo">userInfo</Link></li>
-        </ul>
-        {props.children}
+        <RouterView/>
 
       </header>
     </div>

@@ -22,9 +22,18 @@ https://medium.com/@chachameow/reactjs%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-compo
 
 # ReactJS 路由
 https://ithelp.ithome.com.tw/articles/10188245
+https://juejin.im/post/6844903609776209927
 
 # react router v.s react router dom (當我們安裝完react-router-dom，react-router就同時被包在裡面了。我們不需要再執行npm i react-router)
 https://ithelp.ithome.com.tw/articles/10226056
+
+# 使用 withRouter 進行 編程式導頁
+https://github.com/brickspert/blog/issues/3
+https://stackoverflow.com/questions/59402649/how-can-i-use-history-pushpath-in-react-router-5-1-2-in-stateful-component
+
+# 使用 withRouter 報錯 You should not use <Route> or withRouter() outside a <Router>
+https://blog.csdn.net/Jane_96/article/details/84754823?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+
 
 ## Available Scripts
 
