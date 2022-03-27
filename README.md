@@ -11,6 +11,7 @@
 
 # windows刪除占用的port
 ref. https://stackoverflow.com/questions/49022731/keep-getting-something-is-already-running-on-port-3000-when-i-do-npm-start-o
+![image](https://github.com/sobadrush/ReactJS-Test-GithubPages/blob/main/ReadMe_Images/windows%E5%88%AA%E9%99%A4%E5%8D%A0%E7%94%A8%E7%9A%84port.png)
 
 # JS export 
 https://wcc723.github.io/development/2020/03/25/import-export/
