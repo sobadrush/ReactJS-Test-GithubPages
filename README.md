@@ -8,6 +8,7 @@
 |  ----  | ----  |
 | 使用npm  | https://ithelp.ithome.com.tw/articles/10228423 |
 | 使用yarn  | https://medium.com/itsoktomakemistakes/create-react-app-deploy-github-pages-95a62d29ca02 |
+| 修改後使GithubPages進行更新 | 1. git add / commit / push 到 main  <br> 2.執行: npm run deploy|
 
 # windows刪除占用的port
 ref. https://stackoverflow.com/questions/49022731/keep-getting-something-is-already-running-on-port-3000-when-i-do-npm-start-o
