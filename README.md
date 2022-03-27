@@ -1,6 +1,13 @@
 # 如何於Local端Run此專案
 1. 使用json-server: json-server -p 3001 -w src/json-server-data/db.json
 2. 啟動React APP: npm start
+3. GithubPages網址: https://sobadrush.github.io/ReactJS-Test-GithubPages/#/
+
+# Deploy部屬到 GithubPages
+|  項目   | 指令  |
+|  ----  | ----  |
+| 使用npm  | https://ithelp.ithome.com.tw/articles/10228423 |
+| 使用yarn  | https://medium.com/itsoktomakemistakes/create-react-app-deploy-github-pages-95a62d29ca02 |
 
 # JS export 
 https://wcc723.github.io/development/2020/03/25/import-export/
