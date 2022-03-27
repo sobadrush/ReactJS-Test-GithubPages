@@ -59,6 +59,7 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <h2 style={myStyle}>Hello World!</h2>
+        <h2>測試 npm run deploy</h2>
 
         {/* 用{}包裹, 才會是int、boolean型態 */}
         <MyProgressBar />
