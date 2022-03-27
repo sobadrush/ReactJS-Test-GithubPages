@@ -4,7 +4,7 @@
 3. GithubPages網址: https://sobadrush.github.io/ReactJS-Test-GithubPages/#/
 
 # Deploy部屬到 GithubPages
-|  項目   | 指令  |
+|  項目   | 參考  |
 |  ----  | ----  |
 | 使用npm  | https://ithelp.ithome.com.tw/articles/10228423 |
 | 使用yarn  | https://medium.com/itsoktomakemistakes/create-react-app-deploy-github-pages-95a62d29ca02 |
