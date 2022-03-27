@@ -1,5 +1,6 @@
-# 使用json測試
-json-server -p 3001 -w src/json-server-data/db.json
+# 如何於Local端Run此專案
+1. 使用json-server: json-server -p 3001 -w src/json-server-data/db.json
+2. 啟動React APP: npm start
 
 # JS export 
 https://wcc723.github.io/development/2020/03/25/import-export/
